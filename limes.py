@@ -28,6 +28,7 @@ class LIMESimpleModel:
             #time1=time.clock()
             simplified_models = explainer.explain_instance(
                     self.cluster_method.cluster_centers_[i],
+                    X[inds[0]],
                     predict_fn,
                     num_samples=10000,
                     labels=range(labels_num),
